@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Sets {
+
+	public static void main(String[] args) {
+		
+		/*	Sets : A collection that cannot contain duplicate.
+		 * 	Sets don't support all the operation you can perform on the list(namely index op).
+		 *  Benefits --> fast searching and no duplicates.
+		 *  
+		 *  HashSet -- general purpose set class 
+		 */
+		
+		/* Set(HashSet) does not allow duplicates
+		 * It stores values in random order
+.\		 * HashSet is implemented using an array called a HashTable that places elements into specific 
+		 * position based on integers called HashCodes.
+		 * 
+		 * 
+		 * In order to copy a list in a set, use:
+		 * Set<String> set = new HashSet<String>(names of the list you want to copy);
+		 * 
+		 * If you want to iterate through a set, we need to use an iterator(w/r) or a for-each(r) loop.
+		 * We cannot you for/ while loop to traverse
+		 * 
+		 * TreeSet is implemented using Binary Search Tree to store its element in sorted order.
+		 */ 
+		Set<String> names = new HashSet<String>();
+		
+		names.add("raj");
+		names.add("singh");
+		names.add("raj");
+		names.add("singh");
+		names.add("raj");
+		names.add("singh");
+		names.add("raj");
+		names.add("singh");
+		names.add("");
+		System.out.println(names);
+		
+		Set<Integer> num = new TreeSet<Integer>();
+		for(int i = 0; i < 50; i++) {
+			for(int j = 43; j <= 50; j++) 
+				num.add(i + j);
+
+		}
+		System.out.println(num);
+	}
+}

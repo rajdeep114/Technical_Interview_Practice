@@ -1,0 +1,14 @@
+
+public class Sets {
+
+	public static void main(String[] args) {
+		/*	Sets : A collection that cannot contain duplicate.
+		 * 	Sets don't support all the operation you can perform on the list(namely index op).
+		 *  Benefits --> fast searching and no duplicates.
+		 *  
+		 *  HashSet -- general purpose set class 
+		 */
+
+	}
+
+}
