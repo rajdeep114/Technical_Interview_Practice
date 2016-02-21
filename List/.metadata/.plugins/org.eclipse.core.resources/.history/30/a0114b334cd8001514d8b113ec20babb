@@ -16,7 +16,7 @@ public class Sets {
 .\		 * HashSet is implemented using an array called a HashTable that places elements into specific 
 		 * position based on integers called HashCodes.
 		 * 
-		 
+		 * 
 		 * In order to copy a list in a set, use:
 		 * Set<String> set = new HashSet<String>(names of the list you want to copy);
 		 * 
@@ -24,12 +24,6 @@ public class Sets {
 		 * We cannot you for/ while loop to traverse
 		 * 
 		 * TreeSet is implemented using Binary Search Tree to store its element in sorted order.
-		 *
-		 * Intersection --- retainAll() -- Lists all the common elements in two sets.
-		 * Difference -- removeAll()	-- remove all the common element in one set found in another
-		 * Union --- addAll() -- combine elements
-		 * Superset, subset --  containsAll -- returns true if A contains all elements of B
-		 * 
 		 */ 
 		Set<String> names = new HashSet<String>();
 		
