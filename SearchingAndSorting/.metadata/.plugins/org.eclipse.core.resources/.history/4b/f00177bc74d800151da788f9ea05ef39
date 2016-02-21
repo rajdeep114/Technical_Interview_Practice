@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+public class Sorting {
+
+	public static void main(String[] args) {
+		String string = "teri maa dii jai";
+		char[] ch = string.toCharArray();
+		Arrays.sort(ch);
+		string = new String(ch);
+		System.out.println(string);
+
+	}
+
+}
