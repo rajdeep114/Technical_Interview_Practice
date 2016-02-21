@@ -1,0 +1,65 @@
+import java.util.*;
+public class Lists {
+
+	public static void main(String[] args) {
+		/* Lists: It is an ordered collection of element, which are often access by iteration or indices.
+		 * Stacks: It is a collection in which last element added is the first to removed. 
+		 * Queue: It is a collection in which the first element added is the first to removed
+		 * Set: It is a collection in which there are no duplicates.
+		 * Maps: A collection of key/value pair. Each key has a corresponding value.
+		 */
+		
+		/* Collections --> Lists and sets
+		 * 		Lists -> ArrayList and LinkedList
+		 * 		Sets -> HashSet and TreeSet
+		 * 
+		 * Map --> HashMap and TreeMap
+		 */
+		
+		/*	Iterator<E> itr = list.iterator();
+		 *  ADT - A specification of a type of data and the operations the can be performed on it.
+		 */
+		
+		findPrime(50);
+		
+		
+		
+	}
+	
+	
+	public static void findPrime(int max) {
+		List<Integer> number = new LinkedList<Integer>();
+		List<Integer> prime = new LinkedList<Integer>();
+		for(int i = 2; i <= max; i++)
+			number.add(i);
+		int root = (int) Math.sqrt(max);
+		int front = 0;
+		boolean found = true;
+		
+		// Remove primes from the number list
+		while(found && !number.isEmpty()) {
+			// remove first element of the number list, which we know is 2(prime number)
+			 front = number.remove(0);
+			prime.add(front);
+			
+			// Make an iterator on the number list
+			Iterator<Integer> itr = number.iterator();
+			while(itr.hasNext()) {
+				int value = itr.next();
+				if(value % front == 0)
+					itr.remove();			// Remove last value returned by next() method
+			}
+			System.out.println(front);
+			
+			if (front >= root)
+				found = false;
+			
+		}
+		
+		prime.addAll(number);
+		System.out.println(number);
+		System.out.println(prime);
+		
+	}
+
+}
