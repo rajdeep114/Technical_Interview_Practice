@@ -1,0 +1,27 @@
+
+public class SequencialSearch {
+	public static void main(String[] args) {
+		int[] array = {0, 1, 3, 4, 5, 6, 7,8};
+		System.out.println(search(array, 0));
+		
+		String[] strings = {"kutti", "aa", "tu"};
+		System.out.println(searchObjects(strings, "kuhtti"));
+		
+	}
+	
+	public static int search(int[] array, int target) {
+		for(int i: array) {
+			if(target == i)
+				return 1;
+		}
+		return -1;			// not found
+	}
+	
+	public static int searchObjects(Object[] obj, Object target) {
+		for(Object i: obj) {
+			if(target.equals(i))
+				return 1;
+		}
+		return -1;			// not found
+	}
+}

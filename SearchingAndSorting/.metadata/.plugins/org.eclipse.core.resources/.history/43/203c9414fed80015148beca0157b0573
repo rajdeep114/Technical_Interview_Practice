@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+
+public class Sorting {
+
+	public static void main(String[] args) {
+		String string = "terimaadiijai";
+		char[] ch = string.toCharArray();
+		Arrays.sort(ch);
+		string = new String(ch);
+		//System.out.println(string);
+		
+		String s = "hello";
+		
+		//for(int i = s.length() - 1; i >= 0; i--)
+			//System.out.print(s.charAt(i));
+		int[] array = { 0, 13, 4, 56, 245, 7, -1, 4, 6, 7 ,-7, -4};
+		System.out.println(Arrays.toString(array));
+		selectionSort(array);
+		System.out.println(Arrays.toString(array));
+
+	}
+	
+	public static void selectionSort(int[]array) {
+		for(int i = 0; i < array.length - 1; i++) {
+			int min = i;
+			for(int j = i ; j < array.length; j++) {
+				if(array[j] < array[min])
+					min = j;
+			}
+			swap(array, i, min);
+		}
+	}
+	
+	public static void swap(int[] array, int indexA, int indexB) {
+		int temp = array[indexA];
+		array[indexA] = array[indexB];
+		array[indexB] = temp;
+	}
+
+}

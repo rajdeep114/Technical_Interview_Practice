@@ -25,11 +25,11 @@ public class BinarySearch {
 		List<Integer> list = new ArrayList<Integer>();
 		for(int i : num)
 			list.add(i);
-		List<Integer> list2 = new ArrayList<Integer>(list);
+		// List<Integer> list2 = new ArrayList<Integer>(list);
 		
 		// Sorting a list using Collections class
 		Collections.sort(list);
-		int in = Collections.binarySearch(list, 53);
+		// int in = Collections.binarySearch(list, 53);
 		
 
 
@@ -38,7 +38,33 @@ public class BinarySearch {
 		
 		
 	}
-	
+	public static int binarySearchObjects(String[] array, String target) {
+		int leftIndex = 0;
+		int rightIndex = array.length - 1;
+		int middleIndex;
+		
+		// We need equal sign in case the value of middle, left and right is same
+		while(leftIndex <= rightIndex) {
+			
+			middleIndex = (leftIndex + rightIndex) / 2;
+			/*compare two string
+				- return -1, if first object is smaller than second
+				- return 0, if first object is equal to second
+				- return 1, if first object is greater than second
+			*/
+			
+			int compare = array[middleIndex].compareTo(target);
+			
+			if(compare == 0)
+				return middleIndex;
+			else if(compare < 0)
+				leftIndex = middleIndex + 1;
+			else
+				rightIndex = middleIndex - 1;
+		}
+		return -1;
+		
+	}
 	
 	
 	public static int binarysearch(int[] array, int target) {
